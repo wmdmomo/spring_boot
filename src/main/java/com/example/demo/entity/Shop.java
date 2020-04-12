@@ -1,17 +1,14 @@
 package com.example.demo.entity;
 
-import javax.persistence.*;
 import java.util.List;
 
-@Entity
+
 public class Shop {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //也要加
+
     private int id;
     private String name;
     private Float rating;
     private Integer order;
-    @OneToMany
     private List<Act> act;
 
     public void setId(int id) {

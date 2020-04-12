@@ -22,7 +22,7 @@ public class ShopServiceImpl implements ShopService {
     public List<Shop> getAll() {
 
         List<Shop> shopList=new ArrayList<>();
-        List<Restaurant> restaurantList=new ArrayList<>();
+        List<Restaurant> restaurantList;
         restaurantList=(List)restDao.findAll();
         for(int i=0;i<restaurantList.size();i++){
             List<Act> actList=new ArrayList<>();

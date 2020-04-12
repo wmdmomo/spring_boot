@@ -5,7 +5,6 @@ import com.example.demo.Restful.RetCode;
 import com.example.demo.Restful.RetResult;
 import com.example.demo.entity.*;
 import com.example.demo.service.ShopService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
