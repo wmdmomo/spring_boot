@@ -13,6 +13,8 @@ public class Restaurant {
     private String name;
     private Float rating;
     private Integer order;
+    private Integer premium;
+    private String flavors;
 
 
     public void setId(int id) {
@@ -45,5 +47,21 @@ public class Restaurant {
 
     public void setOrder(Integer order) {
         this.order = order;
+    }
+
+    public Integer getPremium() {
+        return premium;
+    }
+
+    public void setPremium(Integer premium) {
+        this.premium = premium;
+    }
+
+    public String getFlavors() {
+        return flavors;
+    }
+
+    public void setFlavors(String flavors) {
+        this.flavors = flavors;
     }
 }

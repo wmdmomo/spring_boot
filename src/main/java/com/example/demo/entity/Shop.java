@@ -9,6 +9,9 @@ public class Shop {
     private String name;
     private Float rating;
     private Integer order;
+    private Integer premium;
+    private String flavors;
+
     private List<Act> act;
 
     public void setId(int id) {
@@ -49,5 +52,21 @@ public class Shop {
 
     public void setAct(List<Act> act) {
         this.act = act;
+    }
+
+    public void setFlavors(String flavors) {
+        this.flavors = flavors;
+    }
+
+    public void setPremium(Integer premium) {
+        this.premium = premium;
+    }
+
+    public Integer getPremium() {
+        return premium;
+    }
+
+    public String getFlavors() {
+        return flavors;
     }
 }

@@ -33,6 +33,8 @@ public class ShopServiceImpl implements ShopService {
             shop.setName(restaurant.getName());
             shop.setRating(restaurant.getRating());
             shop.setOrder(restaurant.getOrder());
+            shop.setPremium(restaurant.getPremium());
+            shop.setFlavors(restaurant.getFlavors());
             actList=actDao.findByResid(restaurant.getId());
             shop.setAct(actList);
             shopList.add(shop);
