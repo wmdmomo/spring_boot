@@ -15,6 +15,7 @@ public class Restaurant {
     private Integer order;
     private Integer premium;
     private String flavors;
+    private String img;
 
 
     public void setId(int id) {
@@ -63,5 +64,13 @@ public class Restaurant {
 
     public void setFlavors(String flavors) {
         this.flavors = flavors;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getImg() {
+        return img;
     }
 }

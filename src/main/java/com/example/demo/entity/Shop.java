@@ -11,6 +11,8 @@ public class Shop {
     private Integer order;
     private Integer premium;
     private String flavors;
+    private String img;
+//    private Restaurant restaurants;
 
     private List<Act> act;
 
@@ -54,7 +56,14 @@ public class Shop {
         this.act = act;
     }
 
-    public void setFlavors(String flavors) {
+//    public Restaurant getRestaurants() {
+//        return restaurants;
+//    }
+//
+//    public void setRestaurants(Restaurant restaurants) {
+//        this.restaurants = restaurants;
+//    }
+        public void setFlavors(String flavors) {
         this.flavors = flavors;
     }
 
@@ -68,5 +77,13 @@ public class Shop {
 
     public String getFlavors() {
         return flavors;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getImg() {
+        return img;
     }
 }

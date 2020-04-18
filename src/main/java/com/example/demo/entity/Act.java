@@ -13,6 +13,7 @@ public class Act {
     private String action;
     private String icon;
     private Integer resid;
+    private String color;
 
     public int getId() {
         return id;
@@ -44,5 +45,13 @@ public class Act {
 
     public void setResid(Integer res_id) {
         this.resid = res_id;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

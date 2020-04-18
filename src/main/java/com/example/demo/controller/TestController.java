@@ -4,6 +4,7 @@ import com.example.demo.Dao.*;
 import com.example.demo.Restful.RetCode;
 import com.example.demo.Restful.RetResult;
 import com.example.demo.entity.*;
+import com.example.demo.service.BarService;
 import com.example.demo.service.ShopService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
@@ -23,14 +24,16 @@ public class TestController {
     private BookDao bookDao;
     private NoteDao noteDao;
     private ShopService shopService;
+    private BarService barService;
     
 
-    public TestController(UsrDao usrDao, StaDao staDao, BookDao bookDao, NoteDao noteDao,ShopService shopService) {
+    public TestController(UsrDao usrDao, StaDao staDao, BookDao bookDao, NoteDao noteDao,ShopService shopService,BarService barService) {
         this.usrDao = usrDao;
         this.staDao = staDao;
         this.bookDao = bookDao;
         this.noteDao=noteDao;
         this.shopService=shopService;
+        this.barService=barService;
 
     }
 
@@ -117,6 +120,15 @@ public class TestController {
         List<Shop> list=new ArrayList<>();
         list=shopService.getAll();
         res.put("restaurant",list);
+        return new RetResult(RetCode.SUCCESS.getCode(), res);
+    }
+
+    @GetMapping(value = "getBar")
+    public RetResult getBar(@RequestParam Integer id){
+        Map<String, Object> res = new HashMap<>();
+        List<MenuIn> list=new ArrayList<>();
+        list=barService.getMenu(id);
+        res.put("menu",list);
         return new RetResult(RetCode.SUCCESS.getCode(), res);
     }
 }
